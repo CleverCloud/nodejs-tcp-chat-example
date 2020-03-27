@@ -28,6 +28,10 @@ net.createServer((socket) => {
     broadcast(socket.name + '> ' + data, socket);
   });
 
+  socket.on('error', (error) => {
+    console.error(error);
+  });
+
   // Remove the client from the list when it leaves
   socket.on('end', () => {
     clients.splice(clients.indexOf(socket), 1);
