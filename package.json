@@ -1,11 +1,20 @@
 {
   "name": "tcp-chat",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/start-app.js",
+    "start:dev": "nodemon src/start-app.js"
   },
-  "author": "",
-  "license": "ISC"
+  "engines": {
+    "node": "14"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ansi-escapes": "^4.3.1",
+    "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
