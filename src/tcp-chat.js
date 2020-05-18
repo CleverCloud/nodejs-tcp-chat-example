@@ -1,9 +1,9 @@
-import ansi from 'ansi-escapes';
-import colors from 'colors/safe.js';
+import ansi from './ansi-escapes.js';
+import * as colors from 'https://deno.land/std@0.50.0/fmt/colors.ts';
 import { getRandomAlias } from './utils.js';
 
 // We need to force colors because on the server, it's automatically disabled
-colors.enable();
+colors.setColorEnabled(true);
 
 export class TcpChat {
 

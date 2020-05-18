@@ -3,16 +3,15 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "node src/start-app.js",
-    "start:dev": "nodemon src/start-app.js"
+    "start": "./bin/deno run --allow-net --allow-env --allow-read --unstable --lock=deno-lock.json src/start-app.js",
+    "start:dev": "nodemon --exec './bin/deno run --allow-net --allow-env --allow-read --unstable src/start-app.js'"
   },
   "engines": {
     "node": "14"
   },
   "license": "MIT",
   "dependencies": {
-    "ansi-escapes": "^4.3.1",
-    "colors": "^1.4.0"
+    "ansi-escapes": "^4.3.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
