@@ -1,4 +1,4 @@
-import { serve } from 'https://deno.land/std@0.50.0/http/server.ts';
+import { createHttpServer } from './deps.js';
 
 async function listenToRequests (httpServer, publicTcpPort) {
   for await (const req of httpServer) {
@@ -17,7 +17,7 @@ async function listenToRequests (httpServer, publicTcpPort) {
 
 export function startHttpServer ({ port, publicTcpPort }) {
 
-  const httpServer = serve({ port });
+  const httpServer = createHttpServer({ port });
 
   // Deno uses an async iterator to receive HTTP connections
   // It's not the best fit for a "push" stream so

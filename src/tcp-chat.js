@@ -1,5 +1,5 @@
 import ansi from './ansi-escapes.js';
-import * as colors from 'https://deno.land/std@0.50.0/fmt/colors.ts';
+import { colors } from './deps.js';
 import { getRandomAlias } from './utils.js';
 
 // We need to force colors because on the server, it's automatically disabled

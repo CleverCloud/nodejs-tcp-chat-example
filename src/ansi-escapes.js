@@ -6,7 +6,7 @@
 // We'll try to use Deno's node support to load a CJS module from node_modules
 // This failes https://github.com/denoland/deno/issues/5442
 // That's why we added a --unstable in the start script
-import { createRequire } from 'https://deno.land/std/node/module.ts';
+import { createRequire } from './deps.js';
 
 const require = createRequire(import.meta.url);
 

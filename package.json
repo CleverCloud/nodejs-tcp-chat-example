@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "cache:update": "./bin/deno cache -r --unstable --lock=deno-lock.json --lock-write src/start-app.js",
     "start": "./bin/deno run --allow-net --allow-env --allow-read --unstable --lock=deno-lock.json src/start-app.js",
     "start:dev": "nodemon --exec './bin/deno run --allow-net --allow-env --allow-read --unstable src/start-app.js'"
   },
